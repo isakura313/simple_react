@@ -5,21 +5,37 @@ class App extends Component{
         super()
         this.state ={
             items: [],
-            currentItem: {text:"", key:""}
+            currentItem: {text:" asd", key:""}
         }
     }
     handleInput = e =>{
-        console.log("It's input")
+        const itemText = e.target.value
+        const currentItem = {text:itemText, key: Date.now() }
+        this.setState({
+            currentItem,
+        })
     }
-    addItem = () =>{
-
-        console.log("hello Add Item")
+    addItem = e =>{
+        e.preventDefault()
+        const newItem = this.state.currentItem
+        if(newItem.text !==''){
+            console.log(newItem)
+            const items = [...this.state.items, newItem]
+            this.setState({
+                items: items,
+                currentItem: {text: '', key:''}
+            })
+        }
     }
     render(){
         return(
             <div className="App">
-              <h1> Hello </h1>
-              <TodoList addItem={this.addItem} />
+              <TodoList 
+                    addItem={this.addItem}
+                    inputElement={this.inputElement}
+                    handleInput={this.handleInput}
+                    currentItem={this.state.currentItem}
+                    />
             </div>
         )
     }
