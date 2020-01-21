@@ -1,6 +1,7 @@
 import TodoList from './TodoList';
 import TodoItems from "./TodoItems"
 import React, {Component} from 'react';
+import Watch from "./Watch";
 
 class App extends Component{
     constructor(){
@@ -30,16 +31,27 @@ class App extends Component{
             })
         }
     }
+
+    deleteItem = key =>{
+            const filteredItems = this.state.items.filter(item=> {
+                return item.key !== key
+            })
+            this.setState({
+                items:filteredItems,
+            })
+    }
+
     render(){
         return(
             <div className="App">
+            <Watch/>
               <TodoList 
                     addItem={this.addItem}
                     inputElement={this.inputElement}
                     handleInput={this.handleInput}
                     currentItem={this.state.currentItem}
                     />
-                    <TodoItems entries = {this.state.items} />
+                    <TodoItems entries = {this.state.items} deleteItem={this.deleteItem} />
             </div>
         )
     }

@@ -1,0 +1,11 @@
+.Todo_li{
+    list-style-type: none;
+    font-size: 20px;
+    border: 2px solid black;
+    padding: 3px;
+}
+.button__todo{
+    font-size: 20px;
+    padding: 2px;
+    margin-left: 3em;
+}
