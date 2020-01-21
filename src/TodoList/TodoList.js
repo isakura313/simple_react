@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+
 import Welcome from "./../Welcome"
 import './TodoList.css';
 // компонента на классах
@@ -18,9 +19,8 @@ class TodoList extends Component{
                             <button type="submit" className="todoList__submit"> Add Task</button>
                         </form>
                     </div>
+                   
                 </div>
-
-
         )
     }
 }

@@ -1,13 +1,16 @@
 import TodoList from './TodoList';
+import TodoItems from "./TodoItems"
 import React, {Component} from 'react';
+
 class App extends Component{
     constructor(){
         super()
-        this.state ={
+        this.state = {
             items: [],
-            currentItem: {text:" asd", key:""}
+            currentItem: {text:"Item", key:"firstItem"}
         }
     }
+
     handleInput = e =>{
         const itemText = e.target.value
         const currentItem = {text:itemText, key: Date.now() }
@@ -36,6 +39,7 @@ class App extends Component{
                     handleInput={this.handleInput}
                     currentItem={this.state.currentItem}
                     />
+                    <TodoItems entries = {this.state.items} />
             </div>
         )
     }
