@@ -9,7 +9,6 @@ let TodoItemCss = {
     alignItems: "center"
 }
 
-let l
 
 class TodoItem extends Component{
     createTasks = item => {

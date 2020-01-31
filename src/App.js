@@ -8,7 +8,7 @@ class App extends Component{
         super()
         this.state = {
             items: [],
-            currentItem: {text:"Item", key:"firstItem"}
+            currentItem: {text:" ", key:"firstItem"}
         }
     }
 
