@@ -28,9 +28,11 @@ class Watch extends React.Component{
 
     render(){
     return (
-        <div>
-            <h1> Настоящее время по Москве</h1>
-            <h3> {this.state.date.toLocaleTimeString()} </h3>
+        <div className ="columns is-centered">
+        <div className="column is-half">
+            <h1 className="is-size-3 has-text-centered"> Настоящее время по Москве</h1>
+            <h3 className="subtitle is-size-5 has-text-info has-text-centered"> {this.state.date.toLocaleTimeString()} </h3>
+        </div>
         </div>
     )
     }

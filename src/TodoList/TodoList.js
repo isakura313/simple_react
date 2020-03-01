@@ -1,22 +1,24 @@
 import React, {Component} from 'react';
 
 import Welcome from "./../Welcome"
-import './TodoList.css';
-// компонента на классах
+
 
 class TodoList extends Component{
     render() {
         return(
-            <div className="todoList">
-                <Welcome name="Pavel" />
-                    <div className="todoList">
-                        <form onSubmit={this.props.addItem} className="todoList__form">
-                            <input placeholder="Task" className="todoList__input"
+            <div className="сolumns is-centered">
+                <Welcome name="UserName" />
+                    <div className="columns is-centered">
+                        <form onSubmit={this.props.addItem} className="column is-half">
+                            <div class="field">
+                            <div class="control">
+                            <input placeholder="Task" className="input is-primary"
                                     ref={this.props.inputElement}
                                     value = {this.props.currentItem.text}
                                     onChange = {this.props.handleInput}
-                                    />
-                            <button type="submit" className="todoList__submit"> Add Task</button>
+                                    /></div>
+                                    </div>
+                            <button type="submit" className="button button-info"> Add Task</button>
                         </form>
                     </div>
                    
