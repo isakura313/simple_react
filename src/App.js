@@ -43,16 +43,16 @@ class App extends Component{
 
     render(){
         return(
-            <div className="App">
-            <Watch/>
-              <TodoList 
-                    addItem={this.addItem}
-                    inputElement={this.inputElement}
-                    handleInput={this.handleInput}
-                    currentItem={this.state.currentItem}
-                    />
-                    <TodoItems entries = {this.state.items} deleteItem={this.deleteItem} />
-            </div>
+	            <div className="App">
+	            <Watch/>
+	              <TodoList 
+	                    addItem={this.addItem}
+	                    inputElement={this.inputElement}
+	                    handleInput={this.handleInput}
+	                    currentItem={this.state.currentItem}
+	                    />
+	                    <TodoItems entries = {this.state.items} deleteItem={this.deleteItem} />
+	            </div>
         )
     }
 }
